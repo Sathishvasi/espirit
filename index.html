@@ -11,23 +11,23 @@
     <link rel="stylesheet" href="./vendor/slick/slick.css">
     <link rel="stylesheet" href="./vendor/slick/slick-theme.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./styles/bootstrap.min.css" />
 </head>
 
 <body>
     <div class="loader">
         <p>esprit</p>
     </div>
-    <div class="esprit-wrapper">
-        <video muted loop class="myVideo" id="myVideo1" poster="./assets/poster.jfif">
-            <source src="./assets/videoplayback.mp4" type="video/mp4">
-        </video>
-        <div class="overlay"></div>
+    <div class="overlay"></div>
+    <header>
+        <nav class="navbar mb-5">
+            <div class="logo container">
+                <img src="./assets/logo.png" alt="Logo">
+            </div>
+        </nav>
+    </header>
+    <div class="container" style="height: 100%;">
         <div class="esprit-content">
-            <nav class="esprit-content__head">
-                <div class="logo">
-                    <img src="./assets/logo.png" alt="Logo">
-                </div>
-            </nav>
             <div class="esprit-content__video-desc">
                 <h1>Lion King</h1>
                 <span>Adventure | Animation | Drama</span>
@@ -49,6 +49,7 @@
             </div>
         </div>
     </div>
+    
     <div id="snackbar"></div>
 
     <div class="videoModal">
@@ -62,22 +63,22 @@
                 <p class="heading">Story Parameter</p>
                 <ul>
                     <li>
-                        <p>T-shirt</p>
+                        <small>T-shirt</small>
                     </li>
                     <li>
-                        <p>Chris Pratt</p>
+                        <small>Chris Pratt</small>
                     </li>
                     <li>
-                        <p>Jeniffer Anniston</p>
+                        <small>Jeniffer Anniston</small>
                     </li>
                     <li>
-                        <p>Space shuttle</p>
+                        <small>Space shuttle</small>
                     </li>
                     <li>
-                        <p>Coffee</p>
+                        <small>Coffee</small>
                     </li>
                     <li>
-                        <p>Corn flakes</p>
+                        <small>Corn flakes</small>
                     </li>
                 </ul>
             </div>

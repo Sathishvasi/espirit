@@ -4,6 +4,91 @@ p {
   font-family: "Nunito", sans-serif;
 }
 
+body{
+  background: url(../assets/poster.jfif) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  -o-background-size: cover;
+}
+
+#myVideo2 {
+	height: 100vh;
+	width: 100%;
+}
+.modal-body {
+	padding: 0;
+	margin: 0;
+}
+.close {
+color: white;
+    position: absolute;
+    /* background: blue !important; */
+    border: 0;
+    top: 0;
+    z-index: 99999;
+    right: 3%;
+    float: none;
+    opacity: 1;
+    font-size: 40px;
+    font-weight: 400;
+}
+.modal-footer {
+    text-align: initial;
+}
+.modal-transparent {
+	background: transparent;
+	.modal-content {
+		background: transparent;
+	}
+}
+.modal-backdrop {
+	&.modal-backdrop-transparent {
+		background: #ffffff;
+		&.in {
+			opacity: .9;
+			filter: alpha(opacity=90);
+		}
+	}
+	&.modal-backdrop-fullscreen {
+		background: #ffffff;
+		&.in {
+			opacity: .97;
+			filter: alpha(opacity=97);
+		}
+	}
+}
+.modal-fullscreen {
+	background: transparent;
+	.modal-content {
+		background: transparent;
+		border: 0;
+		//Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+		box-shadow: none;
+	}
+	.modal-dialog {
+		margin: 0;
+		margin-right: auto;
+		margin-left: auto;
+		width: 100%;
+	}
+}
+@media(min-width: 768px) {
+	.modal-fullscreen .modal-dialog {
+		width: 750px;
+	}
+}
+@media(min-width: 992px) {
+	.modal-fullscreen .modal-dialog {
+		width: 970px;
+	}
+}
+@media(min-width: 1200px) {
+	.modal-fullscreen .modal-dialog {
+		width: 100%;
+	}
+}
+
 .loader {
   width: 100%;
   height: 100%;
@@ -41,8 +126,8 @@ p {
   width: 100%;
   height: 100%;
   position: absolute;
-  top: 0;
   display: none;
+  top: 0px;
 
   .close-modal {
     right: 50px;
@@ -61,13 +146,20 @@ p {
   .story-parameter {
     z-index: 100;
     color: white;
-    width: 300px;
+    width: 200px;
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
     .overlay {
       height: 100%;
       opacity: 0.4;
+    }
+    .paramter-content{
+      ul{
+        small{
+          padding-left: 5px;
+        }
+      }
     }
   }
 
@@ -128,8 +220,8 @@ p {
   background-color: black;
   height: 100vh;
   width: 100%;
-  z-index: 1;
   position: absolute;
+  z-index: 0;
   opacity: 0.6;
 }
 
@@ -142,10 +234,13 @@ p {
   object-fit: cover;
 }
 
-.esprit-wrapper {
+#video-bg{
+  background-image: url(../assets/poster.jfif);
+  background-size: cover;
+}
+
+
   .esprit-content {
-    max-width: 1200px;
-    margin: 0 auto;
     z-index: 99;
     position: relative;
     color: white;
@@ -222,4 +317,3 @@ p {
       }
     }
   }
-}

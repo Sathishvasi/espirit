@@ -4,6 +4,102 @@ p {
   font-family: "Nunito", sans-serif;
 }
 
+body {
+  background: url(../assets/poster.jfif) no-repeat center center fixed;
+  background-size: cover;
+  -o-background-size: cover;
+}
+
+#myVideo2 {
+  height: 100vh;
+  width: 100%;
+}
+
+.modal-body {
+  padding: 0;
+  margin: 0;
+}
+
+.close {
+  color: white;
+  position: absolute;
+  /* background: blue !important; */
+  border: 0;
+  top: 0;
+  z-index: 99999;
+  right: 3%;
+  float: none;
+  opacity: 1;
+  font-size: 40px;
+  font-weight: 400;
+}
+
+.modal-footer {
+  text-align: initial;
+}
+
+.modal-transparent {
+  background: transparent;
+}
+
+.modal-transparent .modal-content {
+  background: transparent;
+}
+
+.modal-backdrop.modal-backdrop-transparent {
+  background: #ffffff;
+}
+
+.modal-backdrop.modal-backdrop-transparent.in {
+  opacity: .9;
+  filter: alpha(opacity=90);
+}
+
+.modal-backdrop.modal-backdrop-fullscreen {
+  background: #ffffff;
+}
+
+.modal-backdrop.modal-backdrop-fullscreen.in {
+  opacity: .97;
+  filter: alpha(opacity=97);
+}
+
+.modal-fullscreen {
+  background: transparent;
+}
+
+.modal-fullscreen .modal-content {
+  background: transparent;
+  border: 0;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+.modal-fullscreen .modal-dialog {
+  margin: 0;
+  margin-right: auto;
+  margin-left: auto;
+  width: 100%;
+}
+
+@media (min-width: 768px) {
+  .modal-fullscreen .modal-dialog {
+    width: 750px;
+  }
+}
+
+@media (min-width: 992px) {
+  .modal-fullscreen .modal-dialog {
+    width: 970px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .modal-fullscreen .modal-dialog {
+    width: 100%;
+  }
+}
+
 .loader {
   width: 100%;
   height: 100%;
@@ -59,8 +155,8 @@ p {
   width: 100%;
   height: 100%;
   position: absolute;
-  top: 0;
   display: none;
+  top: 0px;
 }
 
 .videoModal .close-modal {
@@ -80,7 +176,7 @@ p {
 .videoModal .story-parameter {
   z-index: 100;
   color: white;
-  width: 300px;
+  width: 200px;
   position: absolute;
   top: 50%;
   -webkit-transform: translateY(-50%);
@@ -91,6 +187,11 @@ p {
 .videoModal .story-parameter .overlay {
   height: 100%;
   opacity: 0.4;
+}
+
+.videoModal .advertisement .paramter-content ul small,
+.videoModal .story-parameter .paramter-content ul small {
+  padding-left: 5px;
 }
 
 .videoModal .advertisement-content,
@@ -149,8 +250,8 @@ p {
   background-color: black;
   height: 100vh;
   width: 100%;
-  z-index: 1;
   position: absolute;
+  z-index: 0;
   opacity: 0.6;
 }
 
@@ -164,33 +265,36 @@ p {
      object-fit: cover;
 }
 
-.esprit-wrapper .esprit-content {
-  max-width: 1200px;
-  margin: 0 auto;
+#video-bg {
+  background-image: url(../assets/poster.jfif);
+  background-size: cover;
+}
+
+.esprit-content {
   z-index: 99;
   position: relative;
   color: white;
 }
 
-.esprit-wrapper .esprit-content__video-desc {
+.esprit-content__video-desc {
   padding-top: 50px;
   width: 420px;
 }
 
-.esprit-wrapper .esprit-content__video-desc h1 {
+.esprit-content__video-desc h1 {
   margin: 0;
   padding-bottom: 7px;
 }
 
-.esprit-wrapper .esprit-content__video-desc span {
+.esprit-content__video-desc span {
   display: block;
 }
 
-.esprit-wrapper .esprit-content__video-desc p {
+.esprit-content__video-desc p {
   margin: 20px 0 35px 0;
 }
 
-.esprit-wrapper .esprit-content__video-desc button {
+.esprit-content__video-desc button {
   border: 1px solid white;
   background: transparent;
   color: white;
@@ -203,61 +307,61 @@ p {
   transition: 0.5s all linear;
 }
 
-.esprit-wrapper .esprit-content__video-desc button i {
+.esprit-content__video-desc button i {
   margin-right: 12px;
   font-size: 14px;
 }
 
-.esprit-wrapper .esprit-content__video-desc button:hover {
+.esprit-content__video-desc button:hover {
   opacity: 0.7;
 }
 
-.esprit-wrapper .esprit-content__head {
+.esprit-content__head {
   padding-top: 20px;
 }
 
-.esprit-wrapper .esprit-content__head .logo img {
+.esprit-content__head .logo img {
   width: 140px;
 }
 
-.esprit-wrapper .esprit-content .movie-carousel {
+.esprit-content .movie-carousel {
   margin-top: 55px;
   /* the slides */
   /* the parent */
 }
 
-.esprit-wrapper .esprit-content .movie-carousel .slick-prev {
+.esprit-content .movie-carousel .slick-prev {
   left: -60px;
 }
 
-.esprit-wrapper .esprit-content .movie-carousel .slick-next {
+.esprit-content .movie-carousel .slick-next {
   right: -60px;
 }
 
-.esprit-wrapper .esprit-content .movie-carousel .slick-slide {
+.esprit-content .movie-carousel .slick-slide {
   margin: 0 30px;
 }
 
-.esprit-wrapper .esprit-content .movie-carousel .slick-list {
+.esprit-content .movie-carousel .slick-list {
   margin: 0 -30px;
 }
 
-.esprit-wrapper .esprit-content .movie-carousel .slick-list .slick-track {
+.esprit-content .movie-carousel .slick-list .slick-track {
   padding-top: 40px;
 }
 
-.esprit-wrapper .esprit-content .movie-carousel .item {
+.esprit-content .movie-carousel .item {
   cursor: pointer;
   -webkit-transition: 1s ease all;
   transition: 1s ease all;
 }
 
-.esprit-wrapper .esprit-content .movie-carousel .item:hover {
+.esprit-content .movie-carousel .item:hover {
   -webkit-transform: scale(1.2);
           transform: scale(1.2);
 }
 
-.esprit-wrapper .esprit-content .movie-carousel .item img {
+.esprit-content .movie-carousel .item img {
   width: 100%;
 }
 /*# sourceMappingURL=styles.css.map */
