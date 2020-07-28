@@ -46,7 +46,7 @@ p {
 }
 
 .esprit-wrapper .esprit-content__video-desc p {
-  margin: 20px 0 40px 0;
+  margin: 20px 0 35px 0;
 }
 
 .esprit-wrapper .esprit-content__video-desc button {
@@ -55,11 +55,16 @@ p {
   color: white;
   border-radius: 5px;
   font-family: "Nunito", sans-serif !important;
-  padding: 5px 15px;
+  padding: 7px 16px;
   font-size: 16px;
   cursor: pointer;
   -webkit-transition: 0.5s all linear;
   transition: 0.5s all linear;
+}
+
+.esprit-wrapper .esprit-content__video-desc button i {
+  margin-right: 12px;
+  font-size: 14px;
 }
 
 .esprit-wrapper .esprit-content__video-desc button:hover {
@@ -86,5 +91,44 @@ p {
 
 .esprit-wrapper .esprit-content__head .logo p {
   color: #00e2ff;
+}
+
+.esprit-wrapper .esprit-content .movie-carousel {
+  margin-top: 55px;
+  /* the slides */
+  /* the parent */
+}
+
+.esprit-wrapper .esprit-content .movie-carousel .slick-prev {
+  left: -60px;
+}
+
+.esprit-wrapper .esprit-content .movie-carousel .slick-next {
+  right: -60px;
+}
+
+.esprit-wrapper .esprit-content .movie-carousel .slick-slide {
+  margin: 0 30px;
+}
+
+.esprit-wrapper .esprit-content .movie-carousel .slick-list {
+  margin: 0 -30px;
+}
+
+.esprit-wrapper .esprit-content .movie-carousel .item {
+  cursor: pointer;
+  width: 150px;
+  height: 240px;
+  -webkit-transition: 1s ease all;
+  transition: 1s ease all;
+}
+
+.esprit-wrapper .esprit-content .movie-carousel .item:hover {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+}
+
+.esprit-wrapper .esprit-content .movie-carousel .item img {
+  width: 100%;
 }
 /*# sourceMappingURL=styles.css.map */
