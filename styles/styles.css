@@ -1,0 +1,92 @@
+body {
+  background-color: black;
+  background-image: url("../assets/background.jpg");
+  font-family: "Nunito", sans-serif;
+  background-size: cover;
+  min-height: 100vh;
+}
+
+body,
+p {
+  margin: 0;
+}
+
+.esprit-wrapper #myVideo {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.esprit-wrapper .overlay {
+  background-color: black;
+  height: 100vh;
+  width: 100%;
+  z-index: 1;
+  position: absolute;
+  opacity: 0.6;
+}
+
+.esprit-wrapper .esprit-content {
+  max-width: 1100px;
+  margin: 0 auto;
+  z-index: 99;
+  position: relative;
+  color: white;
+}
+
+.esprit-wrapper .esprit-content__video-desc {
+  padding-top: 60px;
+  width: 420px;
+}
+
+.esprit-wrapper .esprit-content__video-desc h1 {
+  margin: 0;
+  padding-bottom: 7px;
+}
+
+.esprit-wrapper .esprit-content__video-desc span {
+  margin-bottom: 20px;
+  display: block;
+}
+
+.esprit-wrapper .esprit-content__video-desc p {
+  margin-bottom: 40px;
+}
+
+.esprit-wrapper .esprit-content__video-desc button {
+  border: 1px solid white;
+  background: transparent;
+  color: white;
+  border-radius: 5px;
+  font-family: "Nunito", sans-serif !important;
+  padding: 5px 15px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.esprit-wrapper .esprit-content__head {
+  padding-top: 30px;
+}
+
+.esprit-wrapper .esprit-content__head .logo {
+  width: 177px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+.esprit-wrapper .esprit-content__head .logo p {
+  color: #00e2ff;
+}
+/*# sourceMappingURL=styles.css.map */
