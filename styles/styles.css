@@ -1,14 +1,7 @@
-body {
-  background-color: black;
-  background-image: url("../assets/background.jpg");
-  font-family: "Nunito", sans-serif;
-  background-size: cover;
-  min-height: 100vh;
-}
-
 body,
 p {
   margin: 0;
+  font-family: "Nunito", sans-serif;
 }
 
 .esprit-wrapper #myVideo {
@@ -31,7 +24,7 @@ p {
 }
 
 .esprit-wrapper .esprit-content {
-  max-width: 1100px;
+  max-width: 1200px;
   margin: 0 auto;
   z-index: 99;
   position: relative;
@@ -66,6 +59,12 @@ p {
   padding: 5px 15px;
   font-size: 16px;
   cursor: pointer;
+  -webkit-transition: 0.5s all linear;
+  transition: 0.5s all linear;
+}
+
+.esprit-wrapper .esprit-content__video-desc button:hover {
+  opacity: 0.7;
 }
 
 .esprit-wrapper .esprit-content__head {
