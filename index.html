@@ -18,7 +18,7 @@
         <p>esprit</p>
     </div>
     <div class="esprit-wrapper">
-        <video muted loop id="myVideo" poster="./assets/poster.jfif">
+        <video muted loop class="myVideo" id="myVideo1" poster="./assets/poster.jfif">
             <source src="./assets/videoplayback.mp4" type="video/mp4">
         </video>
         <div class="overlay"></div>
@@ -50,6 +50,46 @@
         </div>
     </div>
     <div id="snackbar"></div>
+
+    <div class="videoModal">
+        <video muted loop autoPlay controls class="myVideo" id="myVideo2" poster="./assets/poster.jfif">
+            <source src="./assets/videoplayback.mp4" type="video/mp4">
+        </video>
+        <div class="close-modal">×</div>
+        <div class="story-parameter">
+            <div class="overlay"></div>
+            <div class="paramter-content">
+                <p class="heading">Story Parameter</p>
+                <ul>
+                    <li>
+                        <p>T-shirt</p>
+                    </li>
+                    <li>
+                        <p>Chris Pratt</p>
+                    </li>
+                    <li>
+                        <p>Jeniffer Anniston</p>
+                    </li>
+                    <li>
+                        <p>Space shuttle</p>
+                    </li>
+                    <li>
+                        <p>Coffee</p>
+                    </li>
+                    <li>
+                        <p>Corn flakes</p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="advertisement">
+            <div class="overlay"></div>
+            <div class="advertisement-content">
+                <p class="heading">Advertisement</p>
+                <img src="./assets/advertisement.png" alt="advertisement">
+            </div>
+        </div>
+    </div>
 </body>
 
 <script src="./vendor/jquery.min.js"></script>

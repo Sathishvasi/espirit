@@ -1,18 +1,17 @@
 $(document).ready(() => {
+    var video = document.getElementById("myVideo2");
+
     $('#videoPlay').click(() => {
-        var video = document.getElementById("myVideo");
-        video.play()
+        video.play();
+        $('.videoModal').show();
     });
     $('.movie-carousel').slick({
         initialSlide: 6,
         slidesToShow: 6,
         slidesToScroll: 6,
     });
-    let stateCheck = setInterval(() => {
-        if (document.readyState === 'complete') {
-            $('.loader').hide()
-            clearInterval(stateCheck);
-            // document ready
-        }
-    }, 2000);
+    $('.close-modal').click(() => {
+        video.pause();
+        $('.videoModal').hide();
+    })
 })
