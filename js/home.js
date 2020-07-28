@@ -4,3 +4,10 @@ $(document).ready(() => {
         video.play()
     })
 })
+let stateCheck = setInterval(() => {
+    if (document.readyState === 'complete') {
+        $('.loader').hide()
+      clearInterval(stateCheck);
+      // document ready
+    }
+  }, 2000);
