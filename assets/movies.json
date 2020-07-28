@@ -1,0 +1,112 @@
+[{
+    "id": "1",
+    "videoUrl": "http://esprit.neoastra.com.s3-website.ap-south-1.amazonaws.com/videos/mib.mp4",
+    "wallUrl": "./assets/movies walls/mib.jpg",
+    "title": "Men in black - International",
+    "description": "When aliens that have the ability to shape-shift into humans arrive on Earth, Agent H joins forces with Agent M, a new recruit, to save the planet.",
+    "tags": [
+        "action",
+        "sci-fi"
+    ],
+    "urlSubString": "mib",
+    "backgroundImage": "./assets/backgrounds/mib-bg.jpg"
+},
+{
+    "id": "2",
+    "videoUrl": "http://esprit.neoastra.com.s3-website.ap-south-1.amazonaws.com/videos/passengers.mp4",
+    "wallUrl": "./assets/movies walls/passengers.jpg",
+    "title": "Passengers",
+    "description": "During a voyage to a distant colony planet, Jim's hypersleep pod malfunctions, waking him up. He and fellow passenger Aurora must work together to prevent their spaceship from meeting with a disaster.",
+    "tags": [
+        "sci-fi",
+        "romance"
+    ],
+    "urlSubString": "passengers",
+    "backgroundImage": "./assets/backgrounds/passengers-bg.jpg"
+
+},
+{
+    "id": "3",
+    "videoUrl": "http://esprit.neoastra.com.s3-website.ap-south-1.amazonaws.com/videos/spiderman_farfromhome.mp4",
+    "wallUrl": "./assets/movies walls/farfromhome.jpg",
+    "title": "Spiderman - Far from home",
+    "description": "As Spider-Man, a beloved superhero, Peter Parker faces four destructive elemental monsters while on holiday in Europe. Soon, he receives help from Mysterio, a fellow hero with mysterious origins.",
+    "tags": [
+        "action",
+        "adventure"
+    ],
+    "urlSubString": "spiderman_farfromhome",
+    "backgroundImage": "./assets/backgrounds/spiderman_farfromhome-bg.jpg"
+
+},
+{
+    "id": "4",
+    "videoUrl": "http://esprit.neoastra.com.s3-website.ap-south-1.amazonaws.com/videos/spiderman_homecoming.mp4",
+    "wallUrl": "./assets/movies walls/homecoming.jpg",
+    "title": "Spider-Man: Homecoming",
+    "description": "Peter Parker tries to stop the Vulture from selling weapons made with advanced Chitauri technology while trying to balance his life as an ordinary high school student.",
+    "tags": [
+        "action",
+        "adventure"
+    ],
+    "urlSubString": "spiderman_homecoming",
+    "backgroundImage": "./assets/backgrounds/spiderman_homecoming-bg.jpg"
+
+},
+{
+    "id": "5",
+    "videoUrl": "http://esprit.neoastra.com.s3-website.ap-south-1.amazonaws.com/videos/spiderman_intothespiderverse.mp4",
+    "wallUrl": "./assets/movies walls/spiderverse.jpg",
+    "title": "Spider-Man: Into the Spider-Verse",
+    "description": "After gaining superpowers from a spider bite, Miles Morales protects the city as Spider-Man. Soon, he meets alternate versions of himself and gets embroiled in an epic battle to save the multiverse.",
+    "tags": [
+        "animation",
+        "action"
+    ],
+    "urlSubString": "spiderman_intothespiderverse",
+    "backgroundImage": "./assets/backgrounds/spiderman_intothespiderverse-bg.jpg"
+
+},
+{
+    "id": "6",
+    "videoUrl": "http://esprit.neoastra.com.s3-website.ap-south-1.amazonaws.com/videos/theequilizer2.mp4",
+    "wallUrl": "./assets/movies walls/theequalizer2.jpg",
+    "title": "The Equalizer 2",
+    "description": "Robert McCall's close friend, Susan Plummer, is murdered while investigating a murder-suicide. As a former spy, he leverages his skills and resources to find the culprit and avenge her death",
+    "tags": [
+        "action",
+        "thriller"
+    ],
+    "urlSubString": "theequilizer2",
+    "backgroundImage": "./assets/backgrounds/theequalizer2-bg.jpg"
+
+},
+{
+    "id": "7",
+    "videoUrl": "http://esprit.neoastra.com.s3-website.ap-south-1.amazonaws.com/videos/venom.mp4",
+    "wallUrl": "./assets/movies walls/venom.jpg",
+    "title": "Venom",
+    "description": "While trying to take down Carlton, the CEO of Life Foundation, Eddie, a journalist, investigates experiments of human trials. Unwittingly, he gets merged with a symbiotic alien with lethal abilities.",
+    "tags": [
+        "action",
+        "sci-fi"
+    ],
+    "urlSubString": "venom",
+    "backgroundImage": "./assets/backgrounds/venom-bg.jpg"
+
+},
+{
+    "id": "8",
+    "videoUrl": "http://esprit.neoastra.com.s3-website.ap-south-1.amazonaws.com/videos/whiteboyrick.mp4",
+    "wallUrl": "./assets/movies walls/whiteboyrick.jpg",
+    "title": "White Boy Rick",
+    "description": "During a voyage to a distant colony planet, Jim's hypersleep pod malfunctions, waking him up. He and fellow passenger Aurora must work together to prevent their spaceship from meeting with a disaster.A teenager, Richard Wershe Jr, becomes an undercover informant for the FBI. But his links with the criminals lead him to become a drug dealer.",
+    "tags": [
+        "drama",
+        "crime"
+    ],
+    "urlSubString": "whiteboyrick",
+    "backgroundImage": "./assets/backgrounds/whiteboyrick-bg.jpg"
+
+}
+]

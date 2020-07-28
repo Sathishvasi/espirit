@@ -10,83 +10,13 @@ body{
   -moz-background-size: cover;
   background-size: cover;
   -o-background-size: cover;
+  -webkit-transition: background-image 0.2s ease-in;
+transition: background-image 0.2s ease-in;
 }
 
 #myVideo2 {
 	height: 100vh;
 	width: 100%;
-}
-.modal-body {
-	padding: 0;
-	margin: 0;
-}
-.close {
-color: white;
-    position: absolute;
-    /* background: blue !important; */
-    border: 0;
-    top: 0;
-    z-index: 99999;
-    right: 3%;
-    float: none;
-    opacity: 1;
-    font-size: 40px;
-    font-weight: 400;
-}
-.modal-footer {
-    text-align: initial;
-}
-.modal-transparent {
-	background: transparent;
-	.modal-content {
-		background: transparent;
-	}
-}
-.modal-backdrop {
-	&.modal-backdrop-transparent {
-		background: #ffffff;
-		&.in {
-			opacity: .9;
-			filter: alpha(opacity=90);
-		}
-	}
-	&.modal-backdrop-fullscreen {
-		background: #ffffff;
-		&.in {
-			opacity: .97;
-			filter: alpha(opacity=97);
-		}
-	}
-}
-.modal-fullscreen {
-	background: transparent;
-	.modal-content {
-		background: transparent;
-		border: 0;
-		//Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
-		box-shadow: none;
-	}
-	.modal-dialog {
-		margin: 0;
-		margin-right: auto;
-		margin-left: auto;
-		width: 100%;
-	}
-}
-@media(min-width: 768px) {
-	.modal-fullscreen .modal-dialog {
-		width: 750px;
-	}
-}
-@media(min-width: 992px) {
-	.modal-fullscreen .modal-dialog {
-		width: 970px;
-	}
-}
-@media(min-width: 1200px) {
-	.modal-fullscreen .modal-dialog {
-		width: 100%;
-	}
 }
 
 .loader {
@@ -128,6 +58,7 @@ color: white;
   position: absolute;
   display: none;
   top: 0px;
+  background-color: black;
 
   .close-modal {
     right: 50px;
@@ -147,6 +78,8 @@ color: white;
     z-index: 100;
     color: white;
     width: 200px;
+    overflow: hidden;
+    min-height: 500px;
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
@@ -239,6 +172,12 @@ color: white;
   background-size: cover;
 }
 
+.logo {
+  img {
+    width: 120px;
+  }
+}
+
 
   .esprit-content {
     z-index: 99;
@@ -246,7 +185,9 @@ color: white;
     color: white;
     &__video-desc {
       padding-top: 50px;
-      width: 420px;
+      position: relative;
+      width: 60%;
+      height: 300px;
       h1 {
         margin: 0;
         padding-bottom: 7px;
@@ -258,11 +199,14 @@ color: white;
         margin: 20px 0 35px 0;
       }
       button {
+
         i {
           margin-right: 12px;
           font-size: 14px;
         }
         border: 1px solid white;
+        position: absolute;
+        bottom: 0px;
         background: transparent;
         color: white;
         border-radius: 5px;
@@ -276,14 +220,8 @@ color: white;
         }
       }
     }
-    &__head {
-      padding-top: 20px;
-      .logo {
-        img {
-          width: 140px;
-        }
-      }
-    }
+
+
 
     .movie-carousel {
       margin-top: 55px;

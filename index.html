@@ -35,17 +35,9 @@
                     As a cub, Simba is forced to leave the Pride Lands after his father Mufasa is murdered by his wicked
                     uncle, Scar. Years later, he returns as a young lion to reclaim his throne.
                 </p>
-                <button id="videoPlay"><i class="fa fa-play"></i>Play Video</button>
+                <button id="videoPlay" movieIndex="0"><i class="fa fa-play"></i>Play Video</button>
             </div>
             <div class="movie-carousel">
-                <div class="item"><img src="./assets/movie1.jpg" alt="m1"></div>
-                <div class="item"><img src="./assets/movie2.jpg" alt="m2"></div>
-                <div class="item"><img src="./assets/movie3.jpg" alt="m3"></div>
-                <div class="item"><img src="./assets/movie4.jpg" alt="m4"></div>
-                <div class="item"><img src="./assets/movie3.jpg" alt="m3"></div>
-                <div class="item"><img src="./assets/movie1.jpg" alt="m1"></div>
-                <div class="item"><img src="./assets/movie4.jpg" alt="m4"></div>
-                <div class="item"><img src="./assets/movie2.jpg" alt="m2"></div>
             </div>
         </div>
     </div>
@@ -53,41 +45,28 @@
     <div id="snackbar"></div>
 
     <div class="videoModal">
-        <video muted loop autoPlay controls class="myVideo" id="myVideo2" poster="./assets/poster.jfif">
-            <source src="./assets/videoplayback.mp4" type="video/mp4">
+        <video muted loop autoPlay controls id="myVideo2">
+            <source id="video-source" type="video/mp4">
         </video>
         <div class="close-modal">×</div>
         <div class="story-parameter">
             <div class="overlay"></div>
             <div class="paramter-content">
                 <p class="heading">Story Parameter</p>
-                <ul>
-                    <li>
-                        <small>T-shirt</small>
-                    </li>
-                    <li>
-                        <small>Chris Pratt</small>
-                    </li>
-                    <li>
-                        <small>Jeniffer Anniston</small>
-                    </li>
-                    <li>
-                        <small>Space shuttle</small>
-                    </li>
-                    <li>
-                        <small>Coffee</small>
-                    </li>
-                    <li>
-                        <small>Corn flakes</small>
-                    </li>
+                <ul id="story-parameters">
+
                 </ul>
             </div>
         </div>
+
         <div class="advertisement">
             <div class="overlay"></div>
             <div class="advertisement-content">
                 <p class="heading">Advertisement</p>
-                <img src="./assets/advertisement.png" alt="advertisement">
+                <a style="justify-content: center;
+                align-items: center;display: flex;" id="link" href="https://www.gucci.com/us/en/ca/men/accessories-for-men/ties-c-men-accessories-ties">
+                <img src="./assets/ads/tie.png" id="image">
+                </a>
             </div>
         </div>
     </div>
