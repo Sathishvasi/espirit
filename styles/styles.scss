@@ -29,18 +29,18 @@ p {
     position: relative;
     color: white;
     &__video-desc {
-      padding-top: 60px;
+      padding-top: 50px;
       width: 420px;
       h1 {
         margin: 0;
         padding-bottom: 7px;
       }
       span {
-        margin-bottom: 20px;
+        // margin-bottom: 20px;
         display: block;
       }
       p {
-        margin-bottom: 40px;
+        margin: 20px 0 40px 0;
       }
       button {
         border: 1px solid white;
@@ -58,7 +58,7 @@ p {
       }
     }
     &__head {
-      padding-top: 30px;
+      padding-top: 20px;
       .logo {
         width: 177px;
         display: flex;

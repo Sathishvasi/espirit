@@ -32,7 +32,7 @@ p {
 }
 
 .esprit-wrapper .esprit-content__video-desc {
-  padding-top: 60px;
+  padding-top: 50px;
   width: 420px;
 }
 
@@ -42,12 +42,11 @@ p {
 }
 
 .esprit-wrapper .esprit-content__video-desc span {
-  margin-bottom: 20px;
   display: block;
 }
 
 .esprit-wrapper .esprit-content__video-desc p {
-  margin-bottom: 40px;
+  margin: 20px 0 40px 0;
 }
 
 .esprit-wrapper .esprit-content__video-desc button {
@@ -68,7 +67,7 @@ p {
 }
 
 .esprit-wrapper .esprit-content__head {
-  padding-top: 30px;
+  padding-top: 20px;
 }
 
 .esprit-wrapper .esprit-content__head .logo {
