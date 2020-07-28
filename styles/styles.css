@@ -4,6 +4,11 @@ p {
   font-family: "Nunito", sans-serif;
 }
 
+.hide-scroll {
+  overflow: hidden;
+  height: 100%;
+}
+
 .loader {
   width: 100%;
   height: 100%;
@@ -57,7 +62,7 @@ p {
 .videoModal {
   z-index: 99;
   width: 100%;
-  height: 100%;
+  height: 100vh;
   position: absolute;
   top: 0;
   display: none;
@@ -164,6 +169,22 @@ p {
      object-fit: cover;
 }
 
+.esprit-wrapper {
+  position: relative;
+}
+
+.esprit-wrapper:before {
+  content: "";
+  background-color: black;
+  min-height: 100vh;
+  height: 100%;
+  width: 100%;
+  z-index: 1;
+  position: absolute;
+  opacity: 0.6;
+  display: block;
+}
+
 .esprit-wrapper .esprit-content {
   max-width: 1200px;
   margin: 0 auto;
@@ -221,7 +242,7 @@ p {
 }
 
 .esprit-wrapper .esprit-content .movie-carousel {
-  margin-top: 55px;
+  margin-top: 25px;
   /* the slides */
   /* the parent */
 }
@@ -243,7 +264,8 @@ p {
 }
 
 .esprit-wrapper .esprit-content .movie-carousel .slick-list .slick-track {
-  padding-top: 40px;
+  padding-top: 35px;
+  padding-bottom: 35px;
 }
 
 .esprit-wrapper .esprit-content .movie-carousel .item {
