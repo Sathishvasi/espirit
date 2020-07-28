@@ -7,6 +7,7 @@ $(document).ready(() => {
 
     $('#videoPlay').click(() => {
         let index = $("#videoPlay").attr('movieIndex')
+        $('body').addClass('hide-scroll');
         selectedIndex = index
         $('.videoModal').show();
         video.pause();
@@ -20,6 +21,7 @@ $(document).ready(() => {
     };
 
     $('.close-modal').click(() => {
+        $('body').removeClass('hide-scroll');
         video.pause();
         $('.videoModal').hide();
     })

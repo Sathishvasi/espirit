@@ -19,6 +19,11 @@ transition: background-image 0.2s ease-in;
 	width: 100%;
 }
 
+.hide-scroll {
+  overflow: hidden;
+  height: 100%;
+}
+
 .loader {
   width: 100%;
   height: 100%;
@@ -54,7 +59,7 @@ transition: background-image 0.2s ease-in;
 .videoModal {
   z-index: 99;
   width: 100%;
-  height: 100%;
+  height: 100vh;
   position: absolute;
   display: none;
   top: 0px;
@@ -224,7 +229,7 @@ transition: background-image 0.2s ease-in;
 
 
     .movie-carousel {
-      margin-top: 55px;
+      margin-top: 25px;
       .slick-prev {
         left: -60px;
       }
@@ -238,8 +243,9 @@ transition: background-image 0.2s ease-in;
       /* the parent */
       .slick-list {
         margin: 0 -30px;
-        .slick-track{
-          padding-top: 40px;
+        .slick-track {
+          padding-top: 35px;
+          padding-bottom: 35px;
         }
       }
       .item {

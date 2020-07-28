@@ -17,6 +17,11 @@ body {
   width: 100%;
 }
 
+.hide-scroll {
+  overflow: hidden;
+  height: 100%;
+}
+
 .loader {
   width: 100%;
   height: 100%;
@@ -70,7 +75,7 @@ body {
 .videoModal {
   z-index: 99;
   width: 100%;
-  height: 100%;
+  height: 100vh;
   position: absolute;
   display: none;
   top: 0px;
@@ -245,7 +250,7 @@ body {
 }
 
 .esprit-content .movie-carousel {
-  margin-top: 55px;
+  margin-top: 25px;
   /* the slides */
   /* the parent */
 }
@@ -267,7 +272,8 @@ body {
 }
 
 .esprit-content .movie-carousel .slick-list .slick-track {
-  padding-top: 40px;
+  padding-top: 35px;
+  padding-bottom: 35px;
 }
 
 .esprit-content .movie-carousel .item {
