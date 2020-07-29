@@ -8,7 +8,6 @@ var bookmarks = [];
 
 
 $(document).ready(() => {
-    // var video = document.getElementById("myVideo2");
 
     function search_story() {
         $('.loader-container').show();
@@ -72,22 +71,16 @@ $(document).ready(() => {
         $('.container').hide();
         selectedIndex = index
         $('.videoModal').show();
-        // video.pause();
         $("#video-source").igVideoPlayer("pause");
 
         // video.load();
         // $("#video-source").igVideoPlayer("load");
 
-
-        //$('#'+videoID).attr('poster', newposter); //Change video poster
-        // video.play();
         $("#video-source").igVideoPlayer("play");
 
     });
 
-    // video.ontimeupdate = function () {
-    //     populate_story_parameters(video.currentTime)
-    // };
+
     $(document).on("igvideoplayerprogress", "#video-source", function (evt, ui) {
         let currenttime = $("#video-source").igVideoPlayer("currentTime");
         populate_story_parameters(currenttime);
@@ -212,8 +205,6 @@ function changeSeletion(index) {
         bookmarks: bookmarks
     })
 
-    // $('#video-source').attr('src', json.videoUrl)
-    // $('#video-source').attr('poster', json.backgroundImage);
     $('#video-source').attr('data-index', index);
 
     $('.movieItem[movieIndex="' + index + '"] .item').addClass('selected')
