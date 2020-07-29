@@ -282,7 +282,7 @@ body {
   transition: 1s ease all;
 }
 
-.esprit-content .movie-carousel .item:hover {
+.esprit-content .movie-carousel .item:hover, .esprit-content .movie-carousel .item.selected {
   -webkit-transform: scale(1.2);
           transform: scale(1.2);
 }

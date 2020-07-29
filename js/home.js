@@ -35,15 +35,13 @@ $(document).ready(() => {
         $.each(json, (index, item) => {
             wallList += '<a class="movieItem" movieIndex="'+index+'"><div class="item"><img src="'+item.wallUrl+'" alt="m1"></div></a>'
         })
-        
-        changeSeletion(0)
-
         $('.movie-carousel').append(wallList);
         $('.movie-carousel').slick({
             initialSlide: 0,
             slidesToShow: 6,
             slidesToScroll: 6,
         });
+        changeSeletion(0)
         $('.movie-carousel').slick('refresh');
             //carousel click
     $('a').click(function(e) {
@@ -125,6 +123,9 @@ function changeSeletion(index){
     $('#videoPlay').attr('movieIndex', index);
     $('#video-source').attr('src', json.videoUrl)
     $('#video-source').attr('poster', json.backgroundImage)
+    debugger;
+    $('.movieItem[movieIndex="'+index+'"] .item').addClass('selected')
+    $('.movieItem[movieIndex!="'+index+'"] .item').removeClass('selected')
 }
 // .modal-backdrop classes
 

@@ -252,7 +252,7 @@ transition: background-image 0.2s ease-in;
         cursor: pointer;
         transition: 1s ease all;
 
-        &:hover {
+        &:hover,&.selected {
           transform: scale(1.2);
         }
         img {
