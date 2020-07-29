@@ -77,7 +77,7 @@ $(document).ready(() => {
         // $("#video-source").igVideoPlayer("load");
 
         $("#video-source").igVideoPlayer("play");
-
+        $("#story-parameters").html('')
     });
 
 
