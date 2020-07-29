@@ -12,13 +12,18 @@
     <link rel="stylesheet" href="./vendor/slick/slick-theme.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="./styles/bootstrap.min.css" />
+
+    <!-- Ignite UI Required Combined CSS Files -->
+    <link href="https://cdn-na.infragistics.com/igniteui/2019.2/latest/css/themes/infragistics/infragistics.theme.css"
+        rel="stylesheet" />
+    <link href="https://cdn-na.infragistics.com/igniteui/2019.2/latest/css/structure/infragistics.css"
+        rel="stylesheet" />
 </head>
 
-<body>
+<body class="overlay">
     <div class="loader">
         <p>esprit</p>
     </div>
-    <div class="overlay"></div>
     <header>
         <nav class="navbar mb-5">
             <div class="logo container">
@@ -41,16 +46,24 @@
             </div>
         </div>
     </div>
-    
+
     <div id="snackbar"></div>
 
     <div class="videoModal">
-        <video muted loop autoPlay controls id="myVideo2">
-            <source id="video-source" type="video/mp4">
-        </video>
+
+        <!-- Video element renders here-->
+        <div id="video-source"></div>
+
         <div class="close-modal">×</div>
-        <div class="story-parameter">
-            <div class="overlay"></div>
+
+        <div class="search-bar overlay">
+            <div class="input-wrapper">
+                <input type="text" id="searchText" />
+                <i class="fa fa-search" id="searchButton"></i>
+            </div>
+        </div>
+
+        <div class="story-parameter overlay">
             <div class="paramter-content">
                 <p class="heading">Story Parameter</p>
                 <ul id="story-parameters">
@@ -59,22 +72,36 @@
             </div>
         </div>
 
-        <div class="advertisement">
-            <div class="overlay"></div>
+        <div class="advertisement overlay">
             <div class="advertisement-content">
                 <p class="heading">Advertisement</p>
                 <a style="justify-content: center;
-                align-items: center;display: flex;" id="link" href="https://www.gucci.com/us/en/ca/men/accessories-for-men/ties-c-men-accessories-ties">
-                <img src="./assets/ads/tie.png" id="image">
+                align-items: center;display: flex;" id="link"
+                    href="https://www.gucci.com/us/en/ca/men/accessories-for-men/ties-c-men-accessories-ties">
+                    <img src="./assets/ads/tie.jpeg" id="image">
                 </a>
             </div>
         </div>
     </div>
+    <div class="loader-container overlay">
+        <div class="page-loader"></div>
+    </div>
 </body>
 
-<script src="./vendor/jquery.min.js"></script>
+<!-- Jquery -->
+<script src="https://ajax.aspnetcdn.com/ajax/modernizr/modernizr-2.8.3.js"></script>
+<script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+<script src="https://code.jquery.com/ui/1.11.1/jquery-ui.min.js"></script>
+
+<!-- Ignite UI Required Combined JavaScript Files -->
+<script src="https://cdn-na.infragistics.com/igniteui/2019.2/latest/js/infragistics.core.js"></script>
+<script src="https://cdn-na.infragistics.com/igniteui/2019.2/latest/js/infragistics.lob.js"></script>
+
+<!-- Disabled latest jquery library temporarily for ignite video player -->
+<!-- <script src="./vendor/jquery.min.js"></script> -->
+
 <script src="./vendor/slick/slick.js"></script>
-<script src="./js/home.js"></script>
 <script src="./js/global.js"></script>
+<script src="./js/home.js"></script>
 
 </html>

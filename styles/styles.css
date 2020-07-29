@@ -10,9 +10,10 @@ body {
   -o-background-size: cover;
   -webkit-transition: background-image 0.2s ease-in;
   transition: background-image 0.2s ease-in;
+  position: relative;
 }
 
-#myVideo2 {
+#video-source {
   height: 100vh;
   width: 100%;
 }
@@ -78,8 +79,8 @@ body {
   height: 100vh;
   position: absolute;
   display: none;
-  top: 0px;
   background-color: black;
+  top: 0;
 }
 
 .videoModal .close-modal {
@@ -91,27 +92,85 @@ body {
   cursor: pointer;
 }
 
-.videoModal video {
+.videoModal #video-source {
   position: absolute;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+.videoModal #video-source_video {
+  height: 100vh;
+}
+
+.videoModal .search-bar {
+  z-index: 1;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  position: absolute;
+  padding: 15px;
+  width: 40%;
+}
+
+.videoModal .search-bar:before {
+  min-height: auto;
+  height: 100%;
+  left: 0;
+  top: 0;
+}
+
+.videoModal .search-bar .input-wrapper {
+  position: relative;
+}
+
+.videoModal .search-bar .input-wrapper:before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background: white;
+  opacity: 0.2;
+  border-radius: 5px;
+  top: 0;
+  left: 0;
+}
+
+.videoModal .search-bar .input-wrapper input {
+  background: transparent;
+  border: none;
+  padding: 8px 10px;
+  width: 95%;
+  position: relative;
+  color: white;
+}
+
+.videoModal .search-bar .input-wrapper input:focus {
+  outline: none;
+}
+
+.videoModal .search-bar .input-wrapper i {
+  position: absolute;
+  right: 10px;
+  color: white;
+  font-size: 20px;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  cursor: pointer;
 }
 
 .videoModal .advertisement,
 .videoModal .story-parameter {
   z-index: 100;
   color: white;
-  width: 200px;
+  width: 250px;
   overflow: hidden;
-  min-height: 500px;
+  height: 400px;
   position: absolute;
   top: 50%;
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
-}
-
-.videoModal .advertisement .overlay,
-.videoModal .story-parameter .overlay {
-  height: 100%;
-  opacity: 0.4;
 }
 
 .videoModal .advertisement .paramter-content ul small,
@@ -129,6 +188,7 @@ body {
 .videoModal .heading {
   font-size: 20px;
   padding-bottom: 25px;
+  margin-bottom: 0;
 }
 
 .videoModal .advertisement {
@@ -139,18 +199,28 @@ body {
   text-align: center;
 }
 
-.videoModal .advertisement .advertisement-content img {
+.videoModal .advertisement .advertisement-content a {
+  height: calc(100% - 50px);
+}
+
+.videoModal .advertisement .advertisement-content a img {
   width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .videoModal .story-parameter .paramter-content ul {
   padding: 0;
   list-style-type: none;
   margin: 0;
+  height: 300px;
+  overflow-y: scroll;
 }
 
 .videoModal .story-parameter .paramter-content ul li {
   position: relative;
+  padding: 5px 10px 10px 10px;
 }
 
 .videoModal .story-parameter .paramter-content ul li:before {
@@ -161,6 +231,8 @@ body {
   background: white;
   opacity: 0.2;
   border-radius: 5px;
+  top: 0;
+  left: 0;
 }
 
 .videoModal .story-parameter .paramter-content ul li:not(:last-child) {
@@ -171,9 +243,11 @@ body {
   padding: 8px 15px;
 }
 
-.overlay {
+.overlay:before {
+  content: "";
   background-color: black;
-  height: 100vh;
+  min-height: 100vh;
+  height: 100%;
   width: 100%;
   position: absolute;
   z-index: 0;
