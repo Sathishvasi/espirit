@@ -11,62 +11,67 @@ var bookmarks = [];
 $(document).ready(() => {
 
     function search_story() {
-        loading = true;
-        $('#spinner').show();
-        $('#searchButton').hide();
-        $('#searchText').blur(); 
-
         var searchword = $('#searchText').val();
-        var videoIndex = $('#video-source').attr('data-index');
-
-        fetch("https://3wdnquj525.execute-api.ap-south-1.amazonaws.com/dev/video/" + api_url_substrings[videoIndex] + "/class/" + searchword).then(function (response) {
-            response.json().then(function (data) {
-                console.log(data);
-                bookmarks = [];
-                if (data.length === 0) {
-                    showSnackBar('No objects found');
-                    $("#video-source").igVideoPlayer("option", "bookmarks", JSON.parse(JSON.stringify(bookmarks)));
-                    $('#spinner').hide();
-                    $('#searchButton').show();
-                    loading = false;
-                    $('#searchText').blur(); 
-                } else {
-                    for (var i = 0; i < data.length; ++i) {
-                        data[i] = Math.floor((data[i] - 12) / 24)
-                    }
-                    if (data.length != 0) {
-                        bookmarks.push({
-                            title: searchword,
-                            time: data[0]
-                        })
-                    }
-                    for (var i = 1; i < data.length; ++i) {
-                        if (data[i] != data[i - 1] && Math.abs(data[i] - data[i - 1]) != 1) {
-                            var object = {};
-                            object.title = searchword;
-                            object.time = data[i];
-                            bookmarks.push(JSON.parse('{"title":"' + searchword + '", "time": ' + data[i] + "}"))
-                        }
-                    }
-                    console.log(bookmarks);
-                    for (i = 0; i < bookmarks.length; ++i) {
-                        $("#video-source").igVideoPlayer("option", "bookmarks", JSON.parse(JSON.stringify(bookmarks)));
-                    }
-                    if ($("#video-source_bookmarks").length) {
-                        $("#video-source_bookmarks").remove();
-                        $("#video-source").show(!0)
-                    }
-                    $('#spinner').hide();
-                    $('#searchButton').show();
-                    $('#searchText').blur(); 
-                    loading = false;
-                }
-            })
-        }).catch(function () {
-            console.log("err")
-            loading = false;
+        if($.trim(searchword) != ''){
+            loading = true;
+            $('#spinner').show();
+            $('#searchButton').hide();
             $('#searchText').blur(); 
-        });
+    
+            
+            var videoIndex = $('#video-source').attr('data-index');
+    
+            fetch("https://3wdnquj525.execute-api.ap-south-1.amazonaws.com/dev/video/" + api_url_substrings[videoIndex] + "/class/" + searchword).then(function (response) {
+                response.json().then(function (data) {
+                    console.log(data);
+                    bookmarks = [];
+                    if (data.length === 0) {
+                        showSnackBar('No objects found');
+                        $("#video-source").igVideoPlayer("option", "bookmarks", JSON.parse(JSON.stringify(bookmarks)));
+                        $('#spinner').hide();
+                        $('#searchButton').show();
+                        loading = false;
+                        $('#searchText').blur(); 
+                    } else {
+                        for (var i = 0; i < data.length; ++i) {
+                            data[i] = Math.floor((data[i] - 12) / 24)
+                        }
+                        if (data.length != 0) {
+                            bookmarks.push({
+                                title: searchword,
+                                time: data[0]
+                            })
+                        }
+                        for (var i = 1; i < data.length; ++i) {
+                            if (data[i] != data[i - 1] && Math.abs(data[i] - data[i - 1]) != 1) {
+                                var object = {};
+                                object.title = searchword;
+                                object.time = data[i];
+                                bookmarks.push(JSON.parse('{"title":"' + searchword + '", "time": ' + data[i] + "}"))
+                            }
+                        }
+                        console.log(bookmarks);
+                        for (i = 0; i < bookmarks.length; ++i) {
+                            $("#video-source").igVideoPlayer("option", "bookmarks", JSON.parse(JSON.stringify(bookmarks)));
+                        }
+                        if ($("#video-source_bookmarks").length) {
+                            $("#video-source_bookmarks").remove();
+                            $("#video-source").show(!0)
+                        }
+                        $('#spinner').hide();
+                        $('#searchButton').show();
+                        $('#searchText').blur(); 
+                        loading = false;
+                    }
+                })
+            }).catch(function () {
+                console.log("err")
+                loading = false;
+                $('#searchText').blur(); 
+            });
+        }else{
+            showSnackBar('invalid input');
+        }
     }
 
     $('#searchButton').click(() => {
