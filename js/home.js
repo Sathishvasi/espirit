@@ -2,6 +2,7 @@ var urls = ["http://esprit.neoastra.com.s3-website.ap-south-1.amazonaws.com/vide
 var thumbnails = ["./assets/movies walls/mib.jpg", "./assets/movies walls/passengers.jpg", "./assets/movies walls/farfromhome.jpg", "./assets/movies walls/homecoming.jpg", "./assets/movies walls/spiderverse.jpg", "./assets/movies walls/theequalizer2.jpg", "./assets/movies walls/venom.jpg", "./assets/movies walls/whiteboyrick.jpg"];
 var movieData = ''
 var selectedIndex = 0;
+var loading = false;
 
 var api_url_substrings = ["mib", "passengers", "spiderman_farfromhome", "spiderman_homecoming", "spiderman_intothespiderverse", "theequilizer2", "venom", "whiteboyrick"];
 var bookmarks = [];
@@ -10,8 +11,10 @@ var bookmarks = [];
 $(document).ready(() => {
 
     function search_story() {
+        loading = true;
         $('#spinner').show();
         $('#searchButton').hide();
+        $('#searchText').blur(); 
 
         var searchword = $('#searchText').val();
         var videoIndex = $('#video-source').attr('data-index');
@@ -25,6 +28,8 @@ $(document).ready(() => {
                     $("#video-source").igVideoPlayer("option", "bookmarks", JSON.parse(JSON.stringify(bookmarks)));
                     $('#spinner').hide();
                     $('#searchButton').show();
+                    loading = false;
+                    $('#searchText').blur(); 
                 } else {
                     for (var i = 0; i < data.length; ++i) {
                         data[i] = Math.floor((data[i] - 12) / 24)
@@ -53,19 +58,24 @@ $(document).ready(() => {
                     }
                     $('#spinner').hide();
                     $('#searchButton').show();
+                    $('#searchText').blur(); 
+                    loading = false;
                 }
             })
         }).catch(function () {
             console.log("err")
+            loading = false;
+            $('#searchText').blur(); 
         });
     }
 
     $('#searchButton').click(() => {
+        if(!loading)
         search_story();
     });
 
     $("#searchText").keypress(function (event) {
-        if (event.keyCode == 13) {
+        if (event.keyCode == 13 && !loading) {
             search_story();
         }
     });
