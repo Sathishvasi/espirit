@@ -10,7 +10,8 @@ var bookmarks = [];
 $(document).ready(() => {
 
     function search_story() {
-        $('.loader-container').show();
+        $('#spinner').show();
+        $('#searchButton').hide();
 
         var searchword = $('#searchText').val();
         var videoIndex = $('#video-source').attr('data-index');
@@ -18,9 +19,12 @@ $(document).ready(() => {
         fetch("https://3wdnquj525.execute-api.ap-south-1.amazonaws.com/dev/video/" + api_url_substrings[videoIndex] + "/class/" + searchword).then(function (response) {
             response.json().then(function (data) {
                 console.log(data);
+                bookmarks = [];
                 if (data.length === 0) {
                     showSnackBar('No objects found');
-                    $('.loader-container').hide();
+                    $("#video-source").igVideoPlayer("option", "bookmarks", JSON.parse(JSON.stringify(bookmarks)));
+                    $('#spinner').hide();
+                    $('#searchButton').show();
                 } else {
                     for (var i = 0; i < data.length; ++i) {
                         data[i] = Math.floor((data[i] - 12) / 24)
@@ -47,7 +51,8 @@ $(document).ready(() => {
                         $("#video-source_bookmarks").remove();
                         $("#video-source").show(!0)
                     }
-                    $('.loader-container').hide();
+                    $('#spinner').hide();
+                    $('#searchButton').show();
                 }
             })
         }).catch(function () {
